@@ -9,7 +9,7 @@
 
                 <div class="card card-login card-hidden mb-3">
                     <div class="card-header card-header-primary text-center">
-                        <h4 class="card-title"><strong>{{ __('Register') }}</strong></h4>
+                        <h4 class="card-title"><strong>{{ __('Registro') }}</strong></h4>
                         <div class="social-line">
                             <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
                                 <i class="fa fa-facebook-square"></i>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="card-body ">
-                        <p class="card-description text-center">{{ __('Or Be Classical') }}</p>
+                        <p class="card-description text-center">{{ __('Biciescuelas') }}</p>
                         <div class="bmd-form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                             <div class="input-group">
                                 <div class="input-group-prepend">
@@ -31,7 +31,7 @@
                                         <i class="material-icons">face</i>
                                     </span>
                                 </div>
-                                <input type="text" name="name" class="form-control" placeholder="{{ __('Name...') }}"
+                                <input type="text" name="name" class="form-control" placeholder="{{ __('Nombre y apellidos...') }}"
                                     value="{{ old('name') }}" required autocomplete="name" autofocus>
                             </div>
                             @if ($errors->has('name'))
@@ -48,7 +48,7 @@
                                         <i class="material-icons">fingerprint</i>
                                     </span>
                                 </div>
-                                <input type="text" name="username" class="form-control" placeholder="{{ __('Username...') }}"
+                                <input type="text" name="username" class="form-control" placeholder="{{ __('Nombre de usuario...') }}"
                                     value="{{ old('username') }}" required autocomplete="username">
                             </div>
                             @if ($errors->has('username'))
@@ -81,7 +81,7 @@
                                     </span>
                                 </div>
                                 <input type="password" name="password" id="password" class="form-control"
-                                    placeholder="{{ __('Password...') }}" required autocomplete="new-password">
+                                    placeholder="{{ __('Contraseña...') }}" required autocomplete="new-password">
                             </div>
                             @if ($errors->has('password'))
                             <div id="password-error" class="error text-danger pl-3" for="password"
@@ -99,7 +99,7 @@
                                     </span>
                                 </div>
                                 <input type="password" name="password_confirmation" id="password_confirmation"
-                                    class="form-control" placeholder="{{ __('Confirm Password...') }}" required autocomplete="new-password">
+                                    class="form-control" placeholder="{{ __('Confirma contraseña...') }}" required autocomplete="new-password">
                             </div>
                             @if ($errors->has('password_confirmation'))
                             <div id="password_confirmation-error" class="error text-danger pl-3"
@@ -121,7 +121,7 @@
                     </div>
                     <div class="card-footer justify-content-center">
                         <button type="submit"
-                            class="btn btn-primary btn-link btn-lg">{{ __('Create account') }}</button>
+                            class="btn btn-primary btn-link btn-lg">{{ __('Crear  Cuenta') }}</button>
                     </div>
                 </div>
             </form>

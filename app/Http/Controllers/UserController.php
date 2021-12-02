@@ -37,6 +37,7 @@ class UserController extends Controller
             + [
                 'password' => bcrypt($request->input('password')),
             ]);
+            
 
         $roles = $request->input('roles', []);
         $user->syncRoles($roles);

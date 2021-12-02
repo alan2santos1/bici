@@ -18,7 +18,7 @@
             <p>{{ __('Dashboard') }}</p>
         </a>
       </li>
-      <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
+       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
           <i><img style="width:25px" src="{{ asset('img/laravel.svg') }}"></i>
           <p>{{ __('Laravel Examples') }}
@@ -62,7 +62,7 @@
       <li class="nav-item{{ $activePage == 'permissions' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('permissions.index') }}">
           <i class="material-icons">bubble_chart</i>
-          <p>{{ __('Permissions') }}</p>
+          <p>{{ __('Permisos') }}</p>
         </a>
       </li>
       @endcan
@@ -74,16 +74,17 @@
         </a>
       </li>
       @endcan
-      <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
-        <a class="nav-link" href="#">
+      
+     <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
+        <a class="nav-link" href="{{ route('registro.create') }}">
           <i class="material-icons">notifications</i>
-          <p>{{ __('Notifications') }}</p>
+          <p>{{ __('registros') }}</p>
         </a>
       </li>
-      <li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
+      {{--<li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
         <a class="nav-link" href="#">
           <i class="material-icons">language</i>
-          <p>{{ __('RTL Support') }}</p>
+          <p>{{ __('RTL Support') }}</p> --}}
         </a>
       </li>
     </ul>

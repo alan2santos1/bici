@@ -19,6 +19,17 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+
+Route::resource('registro-bici', App\Http\Controllers\registroBiciController::class);
+
+
+Route::get('/registro-bici/create', [App\Http\Controllers\registroBiciController::class, 'create'])->name('registro-bici.create');
+
+Route::get('/registro-bici', [App\Http\Controllers\registroBiciController::class, 'index'])->name('registro-bici');
+
+
+
 Route::group(['middleware' => 'auth'], function() {
     Route::get('/users/create', [App\Http\Controllers\UserController::class, 'create'])->name('users.create');
     Route::post('/users', [App\Http\Controllers\UserController::class, 'store'])->name('users.store');
@@ -32,4 +43,14 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::resource('permissions', App\Http\Controllers\PermissionController::class);
     Route::resource('roles', App\Http\Controllers\RoleController::class);
+    /*SE AGREGO ESTA RUTA */
+    Route::resource('registros', App\Http\Controllers\RegistroController::class);
+    
+    Route::get('/registro/create', [App\Http\Controllers\RegistroController::class, 'create'])->name('registro.create');
+
+
 });
+    
+
+
+   
